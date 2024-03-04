@@ -97,7 +97,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   img?: Flex__<typeof PlasmicImg__>;
-  h1?: Flex__<"h1">;
   form?: Flex__<typeof FormWrapper>;
   input?: Flex__<typeof AntdInput>;
   input2?: Flex__<typeof AntdInput>;
@@ -261,18 +260,26 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </div>
             <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
                 projectcss.__wab_text,
-                sty.h1
+                sty.h1__yo6Jb
               )}
             >
               {
-                "Inscription au Conseil s\u00e9natorial\nde Marie-Do Aeschlimann\n13 mars 2024"
+                "Inscription au Conseil s\u00e9natorial\nde Marie-Do Aeschlimann\n13 mars 2024 \u00e0 19h30"
               }
+            </h1>
+            <h1
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1__b9Qo3
+              )}
+            >
+              {"au S\u00e9nat, Palais du Luxembourg"}
             </h1>
           </div>
           <div className={classNames(projectcss.all, sty.freeBox___7Iee)}>
@@ -780,7 +787,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "img",
-    "h1",
     "form",
     "input",
     "input2",
@@ -792,7 +798,6 @@ const PlasmicDescendants = {
     "merci"
   ],
   img: ["img"],
-  h1: ["h1"],
   form: [
     "form",
     "input",
@@ -818,7 +823,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   img: typeof PlasmicImg__;
-  h1: "h1";
   form: typeof FormWrapper;
   input: typeof AntdInput;
   input2: typeof AntdInput;
@@ -891,7 +895,6 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
-    h1: makeNodeComponent("h1"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),
     input2: makeNodeComponent("input2"),
